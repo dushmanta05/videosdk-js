@@ -1,6 +1,17 @@
-.video-container > :first-child {
+.video-container {
+  border-radius: 10px;
   display: flex;
-  /* display: block; */
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.video-container > * {
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
@@ -9,12 +20,13 @@
   position: relative;
 }
 
-.video-container > :first-child > .video-frame {
+.video-container > * > .video-frame {
   height: auto;
   flex-grow: 1;
   border-radius: 10px;
 }
-.video-container > :first-child > div {
+
+.video-container > * > div {
   flex-grow: 0;
   position: absolute;
   bottom: 18px;
