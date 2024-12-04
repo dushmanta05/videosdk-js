@@ -5,6 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VideosSDK JS</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .control-button {
+        background-color: #f0f0f0;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      .control-button:hover {
+        background-color: #e0e0e0;
+      }
+      .one-user .video-container {
+        width: 80%;
+      }
+    </style>
   </head>
   <body
     style="
@@ -13,10 +29,6 @@
         sans-serif;
       margin: 0;
       padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
       height: 100vh;
       background-color: #f8f8f8;
     "
@@ -28,6 +40,7 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        height: 100vh;
       "
     >
       <div
@@ -122,13 +135,87 @@
       <!-- To Display MeetingId -->
       <h3 id="meetingIdHeading"></h3>
 
-      <!-- Controllers -->
-      <button id="leaveBtn">Leave</button>
-      <button id="toggleMicBtn">Toggle Mic</button>
-      <button id="toggleWebCamBtn">Toggle WebCam</button>
-
       <!-- render Video -->
-      <div class="row" id="videoContainer"></div>
+
+      <div
+        style="
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: white;
+          height: 100vh;
+        "
+      >
+        <div
+          style="
+            width: 90%;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+          "
+        >
+          <div
+            class="one-user"
+            style="
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: center;
+              gap: 10px;
+              padding: 20px;
+              background-color: #f4f4f4;
+            "
+          >
+            <div
+              class="row video-container"
+              id="videoContainer"
+              style="
+                border-radius: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: all 0.3s ease;
+                width: 100%;
+                height: 100%;
+              "
+            ></div>
+          </div>
+
+          <!-- Controllers -->
+          <div
+            class="controls"
+            style="
+              display: flex;
+              justify-content: center;
+              gap: 20px;
+              padding: 15px;
+              background-color: #fff;
+            "
+          >
+            <button id="leaveBtn" class="control-button" data-action="copy-url">
+              Leave
+            </button>
+            <button
+              id="toggleWebCamBtn"
+              class="control-button"
+              data-action="toggle-video"
+            >
+              Video
+            </button>
+            <button
+              id="toggleMicBtn"
+              class="control-button"
+              data-action="toggle-audio"
+            >
+              Audio
+            </button>
+            <button class="control-button" data-action="screen-share">
+              Screen Share
+            </button>
+            <button class="control-button" data-action="chat">Chat</button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Add VideoSDK script -->
