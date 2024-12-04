@@ -926,7 +926,9 @@ async function joinMeeting(newMeeting) {
 
 
   let joinMeetingName = document.getElementById("name");
-  let meetingId = document.getElementById("joinMeetingId").value || "";
+  // let meetingId = document.getElementById("joinMeetingId").value || "";
+  let meetingId = "wa6d-ubmu-8qsm";
+
   if (!newMeeting) {
     if (validateMeeting(meetingId, joinNameValue)) {
       console.log("meeting Validated");

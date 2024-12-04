@@ -99,11 +99,10 @@ body {
 input[type='text'] {
   background-color: #212032;
   color: aliceblue;
-  height: 45px;
-  width: 365px;
   border: 1px solid gray;
   text-align: center;
-  border-radius: 8px;
+  border-radius: 3px;
+  padding: 1rem 7rem;
 }
 
 input[type='text']:hover {
@@ -496,7 +495,63 @@ input:-webkit-autofill {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
 }
+
+.join-screen-right-grid {
+
+  margin: 10px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.join-screen-meeting-link-header-container {
+  width: 100%;
+  color: white;
+  background-color: #000;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+
+.join-screen-meeting-link-text {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: inherit;
+  padding: 10px;
+}
+
+.join-screen-meeting-link-container{
+  background-color: #1e1d1c;
+  border-radius: 5px;
+}
+
+.join-screen-meeting-link {
+  font-size: 15px;
+  margin-bottom: 0px;
+  padding: 15px;
+ }
+
+.join-screen-name-input-container {
+  margin-top: 1rem;
+}
+
+.join-now-meeting-button {
+  border-radius: 3px;
+  background-color: rgb(89, 107, 255);
+  outline: none;
+  margin-top: 15px;
+  width: 100%;
+  padding: 1rem 0rem;
+  color:white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
